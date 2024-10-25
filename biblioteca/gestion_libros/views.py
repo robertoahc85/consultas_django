@@ -28,7 +28,9 @@ def buscar_libros(request,keyword):
     libros = Libro.objects.filter(titulo__icontains=keyword)
     return render(request,'gestion_libros/buscar_libros.html',{'libros':libros,'keyword':keyword})
     
-    
+def libros_con_autor_y_editorial(request):
+    libros = Libro.objects.select_related('autor','editorial').all()   
+    return render(request,'gestion_libros/libros_autor_editorial.html',{'libros':libros})
 # Create your views here.
 
 #libros publicado despues del 2000

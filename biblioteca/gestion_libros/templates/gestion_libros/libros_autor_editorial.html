@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <td>Titulo</td>
+        <td>Autor</td>
+        <td>Editorial</td>
+        <td>Precio</td>
+      </thead>
+    {%for libro in libros%}
+ 
+        <tbody>
+            <th></strong>{{libro.titulo}}</th>
+            <th></strong>{{libro.autor.nombre}}</th>
+            <th></strong>{{libro.editorial.nombre}}</th>
+            <th></strong>{{libro.precio}}</th>
+        </tbody>
+
+    {%endfor%}
+</table>
+
