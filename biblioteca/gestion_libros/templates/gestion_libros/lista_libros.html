@@ -1,0 +1,7 @@
+<h1>Lista de Libros</h1>
+<ul>
+    {% for libro in libros%}
+    <li> {{libro.titulo}} -<a href='http://127.0.0.1:8000/gestion_libros/libros/autor/{{libro.autor.nombre}}'>{{libro.autor.nombre}}</a>-${{libro.precio}}</li>
+
+    {%endfor%}
+</ul>

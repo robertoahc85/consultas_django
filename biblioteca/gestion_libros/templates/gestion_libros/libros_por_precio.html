@@ -1,0 +1,6 @@
+<h1>Libro por precio</h1>
+<ul>
+    {%for libro in libros%}
+    <li> {{libro.titulo}}-${{libro.precio}}</li>
+    {%endfor%}
+</ul>

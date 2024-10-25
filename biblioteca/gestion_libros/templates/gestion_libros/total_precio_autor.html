@@ -1,0 +1,6 @@
+<h1>Total de Precios de Libro por Autor</h1>
+<ul>
+    {%for  autor  in total_por_autor%}
+    <li>{{autor.autor__nombre}}- ${{autor.total_precio}}</li>
+    {%endfor%}
+</ul>
