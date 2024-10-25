@@ -21,6 +21,13 @@ def total_precio_por_autor(request):
     return render(request,'gestion_libros/total_precio_autor.html',{'total_por_autor' : total_por_autor})
 
 #Realizar un reporte qeu cuente los libros por autor, y que saque el promedio precio por autor.
+
+#Busque un libro con un titulo que contega una palabra
+def buscar_libros(request,keyword):
+    #filtar los libros cuyo titulo contenga la palabra clave, sin importar mayuscula o minusculas.
+    libros = Libro.objects.filter(titulo__icontains=keyword)
+    return render(request,'gestion_libros/buscar_libros.html',{'libros':libros,'keyword':keyword})
+    
     
 # Create your views here.
 

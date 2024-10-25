@@ -1,0 +1,11 @@
+<h1>Resultado de la busqueda "{{keyword}}"</h1>
+
+<ul>
+    {% if libros%}
+    {%for libro in libros%}
+    <li> {{libro.titulo}} - {{libro.autor.nombre}}</li>
+    {%endfor%}
+    {% else %}
+    <li> No se encontraron libros  que coincidad con {{keyword}}</li>
+    {% endif %}
+</ul>
